@@ -1,0 +1,96 @@
+
+set terminal wxt background 'black'
+unset key
+unset tics
+unset grid
+unset border
+set parametric
+
+unset colorbox
+
+
+set xrange[-5:5]
+set yrange[-3:3]
+
+
+      
+
+do for [n=1:201] {
+     
+     set multiplot layout 1,1
+      
+      
+     plot 'carrom1.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom1.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom2.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom2.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom3.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom3.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom4.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom4.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom5.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom5.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom6.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom6.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom7.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom7.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom8.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom8.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom9.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom9.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom10.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom10.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom11.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom11.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom12.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom12.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom13.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom13.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom14.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom14.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom15.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom15.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom16.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom16.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom17.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom17.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom18.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom18.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     
+     plot 'carrom19.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom19.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+     
+     plot 'carrom20.dat' using 1:2 every ::1::n w l lt 7 lw 1 lc rgb "white" 
+     plot 'carrom20.dat' using 1:2 every ::n::n w p pt 7 ps 1 lc rgb "green"
+      
+      a = 5
+     b = 3
+    
+     plot [0:2*pi] a*cos(t), b*sin(t) w l lt 1 lw 6 lc rgb "white"
+
+     plot -4,0 w p pt 7 ps 2 lc rgb "grey"  
+     plot  4,0 w p pt 7 ps 4 lc rgb "grey"  
+      
+        
+     unset multiplot
+     
+    pause 0.01
+}
